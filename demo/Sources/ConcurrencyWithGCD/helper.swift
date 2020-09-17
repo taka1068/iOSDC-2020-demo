@@ -21,6 +21,15 @@ func createIntArray(count: Int, upperBound: Int?) -> [Int] {
 }
 
 // inspired by https://github.com/objcio/S01E90-concurrent-map/blob/master/Concurrent%20Map/main.swift#L54
+func benchmark(title: String, f: (() -> Void)) {
+    let startTime = DispatchTime.now()
+    f()
+    let endTime = DispatchTime.now()
+    let diff = Double(endTime.uptimeNanoseconds - startTime.uptimeNanoseconds) / 1_000_000_000 as Double
+
+    print("\(title): \(diff) seconds")
+}
+
 func benchmark(array: [Int], title: String, sortFunction: ((inout [Int]) -> Void)) -> [Int] {
     var copy = array
     let startTime = DispatchTime.now()

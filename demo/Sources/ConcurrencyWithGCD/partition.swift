@@ -9,7 +9,6 @@ import Foundation
 
 func partition(arrayBuffer buffer: UnsafeMutableBufferPointer<Int>, low: Int, high: Int) -> Int {
     let pivot = buffer[high]
-
     var pIndex = low
     
     for i in low..<high {
