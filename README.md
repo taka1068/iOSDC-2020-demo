@@ -29,6 +29,6 @@ $ swift run -Xswiftc -O
 - https://github.com/objcio/S01E90-concurrent-map
     - Concept of concurrent map
     - Some benchmark codes
-- https://www.isus.jp/products/vtune/pu38-02-detecting-and-mitigating-false- sharing/
+- https://www.isus.jp/products/vtune/pu38-02-detecting-and-mitigating-false-sharing/
     - False sharing
 
